@@ -92,8 +92,6 @@ searchR =
         >>= relativizeUrls
 
 -- Grouped view of tag filter post
--- FIXME: this generates contentless pages, why?
--- 
 tagsR :: Rules ()
 tagsR = do
   tags <- buildTags postsPattern (fromCapture "tag/*/index.html")
@@ -318,14 +316,13 @@ postCtx =
 -- Feed Rules
 -- FIXME: My own feed templates were nicer, because they could
 -- TODO: bring into own file and import here
--- TODO: bring '20' into the config
 -- render better instead of dumping raw xml on a user with a browser.
 feedR :: Rules ()
 feedR =
   create ["feed/atom.xml"] $ do
     route idRoute
     compile $ do
-      posts <- fmap (take 20) . recentFirst
+      posts <- fmap (take nrOfFeedItems) . recentFirst
               =<< loadAllSnapshots (postsPattern .&&. hasVersion "html") "html"
       renderAtom feedConfiguration feedCtx posts
    where

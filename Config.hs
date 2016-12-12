@@ -7,7 +7,8 @@ module Config where
 import Hakyll.Core.Configuration
 import Hakyll.Web.Feed
 import Hakyll.Core.Identifier.Pattern
-    
+
+-- Some config constants
 author :: String
 author = "Marcel van der Boom"
 authoremail :: String
@@ -18,7 +19,12 @@ siteurl :: String
 siteurl = "https://mrblog.nl"
 copyrightYear :: String
 copyrightYear = "2016"
-
+                
+nrOfRecentPosts :: Int
+nrOfRecentPosts = 5
+nrOfFeedItems :: Int
+nrOfFeedItems = 20
+                
 -- Static files and directories
 staticFiles :: [Pattern]
 staticFiles = [
@@ -28,6 +34,7 @@ staticDirs :: [String]
 staticDirs = [
  "assets/img",                  -- Generic images
  "assets/img/gpx",              -- Images for the gpx viewer
+ "assets/gpx",                  -- GPX files used in blog
  "assets/css/images",           -- CSS images
  "assets/fonts",                -- Fonts
  "files",".well-known","tests"] -- Misc.
