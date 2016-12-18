@@ -9,7 +9,7 @@ executable mrblog
   build-depends:    base == 4.*
                   , basic-prelude
                   , hakyll 
-                  , pandoc >= 1.16
+                  , pandoc 
                   , pandoc-types
                   , parsec
                   , containers

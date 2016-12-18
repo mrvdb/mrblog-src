@@ -30,7 +30,6 @@ import Control.Monad (liftM, filterM)
 
 -- Patterns which match blog postings
 -- TODO: read source patterns from a file
---
 postsPattern :: Pattern
 postsPattern =
   ("sites/main/_posts/*.org"
@@ -401,7 +400,7 @@ sortIdentifiersByDate =
       in compare (parseTime' fn1 :: Maybe UTCTime) (parseTime' fn2 :: Maybe UTCTime)
  
 
--- Possible helpers for draft functionlity by inspecting a 'draf't metadata field
+-- Possible helpers for draft functionality by inspecting a 'draft' metadata field
 isNotDraft :: MonadMetadata m => Identifier -> m Bool
 isNotDraft identifier = liftM (/= Just "true") (getMetadataField identifier "draft")
 

@@ -11,12 +11,16 @@ import Hakyll.Core.Identifier.Pattern
 -- Some config constants
 author :: String
 author = "Marcel van der Boom"
+         
 authoremail :: String
 authoremail = "marcel@hsdev.com"
+              
 sitename :: String
 sitename = "Marcel van der Boom"
+           
 siteurl :: String
 siteurl = "https://mrblog.nl"
+          
 copyrightYear :: String
 copyrightYear = "2016"
                 

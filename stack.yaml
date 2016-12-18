@@ -3,6 +3,8 @@ packages:
 - '.'
 # patched version of pandoc needed for my blog
 # - link conversion slightly differents
+# 1.17 -> dfcd00fcf3eeecf09c3f41253e55ca9541c0da03 [WORKING]
+# 1.19 -> 4dca9b29dca88492f5bbaf08dff62891e9479cf6
 - location:
     git: https://github.com/mrvdb/pandoc
     commit: dfcd00fcf3eeecf09c3f41253e55ca9541c0da03
@@ -10,11 +12,12 @@ packages:
 # - orgmode compiler
 # - tag support in orgmode for hakyll
 - location:
-    git: https://github.com/d12frosted/hakyll
+    git: https://github.com/mrvdb/hakyll
     commit: 01b691d77488439761f19cd60fa1fef0bd79ffb1
 # These extra deps are normally not in the resolver
 # hjsmin needed for lexical error prevention in minifying jquery
 # See: https://codetalk.io/posts/2016-05-10-compiling-scss-and-js-in-hakyll.html
 extra-deps: [ hjsmin-0.2.0.1
-            , language-javascript-0.6.0.4]
+            , language-javascript-0.6.0.4
+            , doctemplates-0.1.0.2]
 resolver: lts-5.11
