@@ -314,8 +314,8 @@ postCtx =
         
 -- Feed Rules
 -- FIXME: My own feed templates were nicer, because they could
+--        render better instead of dumping raw xml on a user with a browser.
 -- TODO: bring into own file and import here
--- render better instead of dumping raw xml on a user with a browser.
 feedR :: Rules ()
 feedR =
   create ["feed/atom.xml"] $ do

@@ -8,7 +8,7 @@ import Hakyll.Core.Configuration
 import Hakyll.Web.Feed
 import Hakyll.Core.Identifier.Pattern
 
--- Some config constants
+-- Some config constants which should not be in source
 author :: String
 author = "Marcel van der Boom"
          
@@ -22,7 +22,7 @@ siteurl :: String
 siteurl = "https://mrblog.nl"
           
 copyrightYear :: String
-copyrightYear = "2016"
+copyrightYear = "2017"
                 
 nrOfRecentPosts :: Int
 nrOfRecentPosts = 5

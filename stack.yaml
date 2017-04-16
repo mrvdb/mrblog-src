@@ -2,7 +2,8 @@ flags: {}
 packages:
 - '.'
 # patched version of pandoc needed for my blog
-# - link conversion slightly differents
+# - link conversion slightly different
+#
 # 1.17 -> dfcd00fcf3eeecf09c3f41253e55ca9541c0da03 [WORKING]
 # 1.19 -> 4dca9b29dca88492f5bbaf08dff62891e9479cf6
 - location:
