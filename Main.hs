@@ -88,7 +88,6 @@ searchR =
         >>= applyAsTemplate baseContext
         >>= loadAndApplyTemplate "_layouts/page.html" baseContext
         >>= loadAndApplyTemplate "_layouts/default.html" baseContext
-        >>= relativizeUrls
 
 -- Grouped view of tag filter post
 tagsR :: Rules ()
@@ -135,7 +134,6 @@ homeR =
      getResourceBody
        >>= applyAsTemplate indexCtx
        >>= loadAndApplyTemplate "_layouts/default.html" indexCtx
-       >>= relativizeUrls
 
 
 -- Template rules
@@ -203,8 +201,6 @@ aboutR = do
     compile $ orgCompilerWith (itemFromVersion "source")
         >>= loadAndApplyTemplate "_layouts/page.html"    baseContext
         >>= loadAndApplyTemplate "_layouts/default.html" baseContext
-        >>= relativizeUrls
-
 
 --groupedPostList :: String -> ([Item a] -> Compiler [Item String]) -> Pattern -> Compiler (Item String)
 groupedPostList title customFilter pattern = do
@@ -224,7 +220,6 @@ groupedPostList title customFilter pattern = do
   makeItem ""
     >>= loadAndApplyTemplate "_layouts/grouped.html" ctx
     >>= loadAndApplyTemplate "_layouts/default.html" ctx
-    >>= relativizeUrls
 
 -- Shorthand to pass filters to grouped list
 tagFilter :: MonadMetadata m => String -> [Item a] -> m [Item a]
@@ -267,7 +262,6 @@ postR = do
       >>= saveSnapshot "html"
       >>= loadAndApplyTemplate "_layouts/nav_comments.html" postCtx
       >>= loadAndApplyTemplate "_layouts/default.html" postCtx
-      >>= relativizeUrls
 
 -- Route should be: /yyyy/mm/dd/filename-without-date.html
 postsRoute :: String -> Routes
