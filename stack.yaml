@@ -6,15 +6,19 @@ packages:
 #
 # 1.17 -> dfcd00fcf3eeecf09c3f41253e55ca9541c0da03 [WORKING]
 # 1.19 -> 4dca9b29dca88492f5bbaf08dff62891e9479cf6
-- location:
-    git: https://github.com/mrvdb/pandoc
-    commit: dfcd00fcf3eeecf09c3f41253e55ca9541c0da03
-# patched version of hakyll
+#- location:
+#    git: git@github.com:mrvdb/pandoc
+#    commit: dfcd00fcf3eeecf09c3f41253e55ca9541c0da03
+- location: packages/pandoc
+
+  # patched version of hakyll
 # - orgmode compiler
 # - tag support in orgmode for hakyll
-- location:
-    git: https://github.com/mrvdb/hakyll
-    commit: 01b691d77488439761f19cd60fa1fef0bd79ffb1
+#- location:
+#    git: git@github.com:mrvdb/hakyll.git
+#    commit: 01b691d77488439761f19cd60fa1fef0bd79ffb1
+- location: packages/hakyll
+
 # These extra deps are normally not in the resolver
 # hjsmin needed for lexical error prevention in minifying jquery
 # See: https://codetalk.io/posts/2016-05-10-compiling-scss-and-js-in-hakyll.html

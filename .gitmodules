@@ -1,0 +1,8 @@
+[submodule "packages/hakyll"]
+	path = packages/hakyll
+	url = git@github.com:mrvdb/hakyll.git
+	branch = mrblog
+[submodule "packages/pandoc"]
+	path = packages/pandoc
+	url = git@github.com:mrvdb/pandoc.git
+	branch = mrblog
